@@ -1,5 +1,4 @@
 ﻿using System;
-using BepInEx.Configuration;
 using Deli.Setup;
 using FistVR;
 
@@ -34,14 +33,13 @@ namespace AlternativeHands
 			var sideLocale = isRight ? "right" : "left";
 			if (config.Enabled.Value)
 			{
-				var value = config.Type.Value;
-				dmode = value;
+				dmode = config.Type.Value;
 				
-				Logger.LogInfo($"Set the {sideLocale} controller type to: " + value);
+				Logger.LogInfo($"Set the {sideLocale} controller type to: {dmode}");
 			}
 			else
 			{
-				Logger.LogInfo($"Defaulted the {sideLocale} controller type to: " + dmode);
+				Logger.LogInfo($"Defaulted the {sideLocale} controller type to: {dmode}");
 			}
 
 			orig(self);
