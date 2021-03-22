@@ -5,14 +5,8 @@
   ],
   "guid": "ash_hat.alternative_hands",
   "version": "1.0.0",
-  "require": "0.3.0",
-  "source_url": "https://github.com/ash-hat/AlternativeHands",
-  "assets": {
-    "patcher": {
-      "hookgen.conf": "deli:monomod.hookgen"
-    },
-    "setup": {
-      "AlternativeHands.dll": "deli:assembly"
-    }
+  "sourceUrl": "https://github.com/ash-hat/AlternativeHands",
+  "runtime": {
+    "AlternativeHands.dll": "assembly"
   }
 }

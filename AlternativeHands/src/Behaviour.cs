@@ -1,17 +1,24 @@
 ﻿using System;
-using Deli.Setup;
+using Deli;
 using FistVR;
+using HarmonyLib;
 
 namespace AlternativeHands
 {
 	public class Behaviour : DeliBehaviour
 	{
+#pragma warning disable 8618
+		private static Behaviour _this;
+#pragma warning restore 8618
+		
 		private readonly HandsConfig _config;
 		
 		public Behaviour()
 		{
 			_config = new HandsConfig(Config);
 			_config.SettingChanged += SettingChanged;
+			
+			_this = this;
 		}
 
 		private void SettingChanged(object sender, EventArgs e)
@@ -21,11 +28,18 @@ namespace AlternativeHands
 
 		private void Awake()
 		{
-			On.FistVR.FVRViveHand.UpdateControllerDefinition += UpdateControllerDefinition;
+			new Harmony(Info.Guid).PatchAll(typeof(Behaviour));
 		}
 
-		private void UpdateControllerDefinition(On.FistVR.FVRViveHand.orig_UpdateControllerDefinition orig, FVRViveHand self)
+		[HarmonyPatch(typeof(FVRViveHand), nameof(FVRViveHand.UpdateControllerDefinition))]
+		[HarmonyPrefix]
+		private static void UpdateControllerDefinition(FVRViveHand __instance)
 		{
+			// Aliases for ease of rebasing
+			var self = __instance;
+			var _config = _this._config;
+			var Logger = _this.Logger;
+			
 			var isRight = self.IsThisTheRightHand;
 			var config = isRight ? _config.Right : _config.Left;
 
@@ -41,8 +55,6 @@ namespace AlternativeHands
 			{
 				Logger.LogInfo($"Defaulted the {sideLocale} controller type to: {dmode}");
 			}
-
-			orig(self);
 		}
 	}
 }

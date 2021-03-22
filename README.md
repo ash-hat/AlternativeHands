@@ -11,9 +11,9 @@ Use this mod to:
 - Flex on people
 
 ## Installation
-Requires [Deli 0.3](https://github.com/Deli-Collective/Deli/releases).
+Requires [Deli 0.2.5](https://github.com/Deli-Collective/Deli/releases/v0.2.5).
 
-Download [the latest release of AlternativeHands](https://github.com/ash-hat/AlternativeHands/releases/latest) and place `AlternativeHands.deli` into your `Deli/mods` folder.
+Download [the latest release of AlternativeHands](https://github.com/ash-hat/AlternativeHands/releases/latest) and place `AlternativeHands.deli` into your `mods` folder.
 
 ## Uninstallation
-Delete `AlternativeHands.deli` from the `mods` folder and `ash_hat.alternative_hands.cfg` from the `Deli/configs` folder.
+Delete `AlternativeHands.deli` from the `mods` folder and `ash_hat.alternative_hands.cfg` from the `mods/configs` folder.
