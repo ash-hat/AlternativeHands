@@ -16,4 +16,4 @@ Requires [Deli 0.3](https://github.com/Deli-Collective/Deli/releases).
 Download [the latest release of AlternativeHands](https://github.com/ash-hat/AlternativeHands/releases/latest) and place `AlternativeHands.deli` into your `Deli/mods` folder.
 
 ## Uninstallation
-Delete `AlternativeHands.deli` from the `mods` folder and `ash_hat.alternative_hands.cfg` from the `Deli/configs` folder.
+Delete `AlternativeHands.deli` from the `Deli/mods` folder and `ash_hat.alternative_hands.cfg` from the `Deli/configs` folder.
