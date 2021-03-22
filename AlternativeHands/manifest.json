@@ -1,0 +1,17 @@
+{
+  "name": "Alternative Hands",
+  "authors": [
+    "ash-hat"
+  ],
+  "guid": "ash_hat.alternative_hands",
+  "version": "1.0.0",
+  "require": "0.3.0",
+  "assets": {
+    "patcher": {
+      "hookgen.conf": "deli:monomod.hookgen"
+    },
+    "setup": {
+      "AlternativeHands.dll": "deli:assembly"
+    }
+  }
+}

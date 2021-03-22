@@ -1,10 +1,19 @@
-# Deli.ExampleMod
-This is an example mod for [Deli](https://github.com/Deli-Collective/Deli), a mod loading framework.
-This example demonstrates the basic usage of the mod manifest, entrypoint, asset readers and asset loaders.
+# Alternative Hands
+[![version](https://img.shields.io/github/v/release/ash-hat/AlternativeHands?&label=version&style=flat-square)](https://github.com/ash-hat/AlternativeHands/releases/latest)
+[![discord](https://img.shields.io/discord/777351065950879744?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2&style=flat-square)](https://discord.gg/g8xeFyt42j)
 
-You'll find that creating plugins in this format is extremely similar to [BepInEx](https://github.com/BepInEx/BepInEx). A similar loading system is used, and Deli mods are
-passed BepInEx objects such as a config and log sources. If you're porting a BepInEx plugin to Deli, it shouldn't require many logical changes.
+A mod that can change the controllers displayed in H3VR, individually. It will change the model, poses, and interaction sphere of a
+controller, but it will not change the control scheme.
 
-Once you're ready to test your mod, simply add all your assets into a directory and edit the manifest to include them. Before releasing,
-zip the contents of your directory and rename the zip file from `.zip` to `.deli`. For more details, see [the
-documentation](https://deli-collective.github.io/Deli/articles/preparing/index.html).
+Use this mod to: 
+- Ensure your guns have the correct poses
+- Look at the pretty controller models
+- Flex on people
+
+## Installation
+Requires [Deli 0.3](https://github.com/Deli-Collective/Deli/releases).
+
+Download [the latest release of AlternativeHands](https://github.com/ash-hat/AlternativeHands/releases/latest) and place `AlternativeHands.deli` into your `mods` folder.
+
+## Uninstallation
+Delete `AlternativeHands.deli` from the `mods` folder and `AlternativeHands.cfg` from the `mods/configs` folder.

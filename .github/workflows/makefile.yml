@@ -1,0 +1,29 @@
+name: makefile
+
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  makefile:
+    name: Run Makefile
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Execute make
+        run: make
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: AlternativeHands
+          path: AlternativeHands.deli
