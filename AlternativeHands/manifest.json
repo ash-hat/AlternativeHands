@@ -1,8 +1,6 @@
 {
   "name": "Alternative Hands",
-  "authors": [
-    "ash-hat"
-  ],
+  "authors": [ "ash-hat" ],
   "guid": "ash_hat.alternative_hands",
   "version": "1.1.0",
   "require": "0.3.1",
